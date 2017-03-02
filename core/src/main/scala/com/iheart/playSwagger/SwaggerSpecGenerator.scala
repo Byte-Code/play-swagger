@@ -35,7 +35,7 @@ final case class SwaggerSpecGenerator(
 
   val defaultRoutesFile = "routes"
 
-  def generate(routesFile: String = defaultRoutesFile): Try[JsObject] = generateFromRoutesFile(routesFile = routesFile, base = defaultBase)
+  def generate(routesFile: String = defaultRoutesFile, base: JsObject = defaultBase): Try[JsObject] = generateFromRoutesFile(routesFile = routesFile, base = base)
 
   val routesExt = ".routes"
 
